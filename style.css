@@ -1,0 +1,87 @@
+body, html {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+#canvas{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+  
+h1{
+    color: white;
+    font-size: 3em;
+}
+
+.overlay {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.animation-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+}
+
+#animatedText {
+    margin-top: 20px; 
+}
+
+#animatedImage {
+    transform-origin: center;
+    transition: transform 2s ease-in-out;
+}
+
+@keyframes initialAnimation {
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@keyframes shrinkEnlargeAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+}
+
