@@ -15,6 +15,9 @@
     <div class="animation-container">
         <h1 id="animatedText">MASIH DO PENG</h1>
         <img src="peng2.png" alt="Animated Image" id="animatedImage">
+        <audio id="myAudio" controls autoplay loop>
+            <source src="por.ogg" type="audio/ogg">
+        </audio>
     </div>
     <div class="overlay"></div>
     <div class="slider-container">
